@@ -1,0 +1,86 @@
+/* BISA Smart Camera — minimal, accessible research tools */
+.evaluation {
+  margin-top: 14px;
+  border: 1px solid #e4ebe5;
+  border-radius: 14px;
+  background: #fff;
+  overflow: hidden;
+}
+.evaluationSummary {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding: 12px 14px;
+  cursor: pointer;
+  list-style: none;
+  color: #3d5944;
+  transition: background 160ms ease;
+}
+.evaluationSummary::-webkit-details-marker, .resultSummary::-webkit-details-marker { display: none; }
+.evaluationSummary:hover, .resultSummary:hover { background: #f6faf5; }
+.evaluationSummary:focus-visible, .resultSummary:focus-visible { outline: 3px solid #9ccdab; outline-offset: -3px; }
+.evaluationIcon {
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  border-radius: 10px;
+  background: #eaf5eb;
+  color: #36794e;
+  flex: 0 0 auto;
+}
+.evaluationHeading { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 3px; }
+.evaluationHeading strong { font-size: 11px; font-weight: 800; }
+.evaluationHeading small { color: #8a9c90; font-size: 10px; line-height: 1.4; }
+.optional {
+  padding: 5px 9px;
+  border-radius: 20px;
+  font-size: 9px;
+  font-weight: 750;
+  background: #f0f5f0;
+  color: #68846d;
+  white-space: nowrap;
+}
+.evaluationChevron { transition: transform 180ms ease; color: #78937f; flex: 0 0 auto; }
+.evaluation[open] .evaluationChevron, .resultDetails[open] .resultSummary svg { transform: rotate(180deg); }
+.evaluationBody { padding: 13px 15px 17px; background: #fbfdfb; border-top: 1px solid #ebf0eb; }
+.evaluationBody p { font-size: 10px; color: #708274; line-height: 1.65; margin: 0 0 12px; }
+.evaluationBody p strong { color: #3f6848; }
+.evaluationLabel { display: block; margin-bottom: 7px; font-weight: 750; font-size: 10px; color: #526c59; }
+.evaluationSelect {
+  display: block;
+  width: 100%;
+  max-width: 370px;
+  padding: 11px 12px;
+  border: 1px solid #dbe7dc;
+  border-radius: 10px;
+  font-size: 11px;
+  background: #fff;
+  color: #304e37;
+}
+.evaluationSelect:focus-visible { outline: 3px solid #bedec2; outline-offset: 2px; }
+.resultDetails { margin-top: 16px; border: 1px solid #e6eee6; border-radius: 11px; overflow: hidden; }
+.resultSummary {
+  cursor: pointer;
+  list-style: none;
+  padding: 11px 13px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  font-weight: 750;
+  color: #59745f;
+  font-size: 10px;
+}
+.resultSummary svg { transition: transform 180ms ease; }
+.resultBody { padding: 12px 13px 14px; background: #fafdfa; border-top: 1px solid #e6eee6; }
+.resultBody p { color: #758677; font-size: 10px; margin: 0 0 9px; }
+.resultBody strong { color: #3d5a44; }
+.resultCaption { margin-top: 10px !important; font-weight: 750; }
+.resultMatch { display: flex; justify-content: space-between; gap: 12px; padding: 7px 0; border-bottom: 1px solid #edf1ed; font-size: 10px; color: #5c7462; }
+.resultMatch:last-child { border-bottom: 0; }
+@media(max-width: 650px) {
+  .evaluationSummary { padding: 10px 11px; gap: 8px; }
+  .evaluationHeading small { font-size: 9px; }
+  .optional { padding: 4px 7px; font-size: 8px; }
+}
